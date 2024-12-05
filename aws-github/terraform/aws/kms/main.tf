@@ -8,7 +8,7 @@ resource "aws_kms_key" "vault_unseal" {
 }
 
 resource "aws_kms_alias" "vault_unseal" {
-  name          = "alias/vault_<CLUSTER_NAME>"
+  name          = "alias/vault_<CLUSTER_NAME>_wb2"
   target_key_id = aws_kms_key.vault_unseal.key_id
 }
 
